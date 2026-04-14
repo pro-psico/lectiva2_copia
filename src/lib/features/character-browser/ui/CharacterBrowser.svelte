@@ -43,8 +43,9 @@
 		display: inline-flex;
 		padding: 0.4rem 0.75rem;
 		border-radius: 999px;
-		background: rgba(78, 205, 196, 0.12);
-		color: #7ef0e3;
+		border: 1px solid var(--color-border);
+		background: var(--color-accent-soft);
+		color: var(--color-focus);
 		font-size: 0.8rem;
 		letter-spacing: 0.08em;
 		text-transform: uppercase;
@@ -60,7 +61,7 @@
 	p {
 		max-width: 60ch;
 		margin: 0;
-		color: rgba(15, 28, 46, 0.65);
+		color: var(--color-text-muted);
 		font-size: 1.03rem;
 	}
 
@@ -85,6 +86,6 @@
 	}
 
 	.error {
-		color: #ffb4b4;
+		color: var(--color-error);
 	}
 </style>

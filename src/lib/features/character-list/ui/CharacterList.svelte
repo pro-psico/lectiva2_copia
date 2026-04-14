@@ -33,7 +33,7 @@
 <style>
 	.empty {
 		margin: 2rem 0 0;
-		color: rgba(15, 28, 46, 0.6);
+		color: var(--color-text-muted);
 	}
 
 	.grid {
@@ -44,10 +44,10 @@
 
 	.card {
 		overflow: hidden;
-		border-radius: 20px;
-		border: 1px solid rgba(0, 0, 0, 0.08);
-		background: #ffffff;
-		box-shadow: 0 16px 36px rgba(0, 0, 0, 0.08);
+		border-radius: 8px;
+		border: 1px solid var(--color-border);
+		background: var(--color-surface);
+		box-shadow: var(--shadow-elevated);
 	}
 
 	img {
@@ -68,7 +68,7 @@
 
 	p {
 		margin: 0 0 0.9rem;
-		color: rgba(15, 28, 46, 0.6);
+		color: var(--color-text-muted);
 	}
 
 	dl {
@@ -81,7 +81,7 @@
 		font-size: 0.74rem;
 		text-transform: uppercase;
 		letter-spacing: 0.08em;
-		color: rgba(15, 28, 46, 0.4);
+		color: var(--color-text-soft);
 	}
 
 	dd {
