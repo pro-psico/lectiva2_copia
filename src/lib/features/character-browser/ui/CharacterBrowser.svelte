@@ -4,19 +4,23 @@
 	import type { CharacterBrowserData } from '../model';
 
 	export let data: CharacterBrowserData;
-	export let onQueryChange: (value: string) => void;
+	export let onFiltersChange: (filters: { query: string; status: string }) => void;
 </script>
 
 <section class="hero">
 	<div class="eyebrow">SvelteKit · Rick and Morty</div>
-	<h1>Arquitectura frontend lista para crecer sin mezclar UI con negocio.</h1>
+	<h1>Rick y Morty buscador espacial</h1>
 	<p>
 		Base feature-first/domain-first con contratos claros entre pantalla, dominio y API.
 	</p>
 </section>
 
 <div class="panel">
-	<CharacterSearch query={data.query} onQueryChange={onQueryChange} />
+	<CharacterSearch
+		query={data.query}
+		status={data.filters?.status ?? ''}
+		onFiltersChange={onFiltersChange}
+	/>
 
 	<div class="meta">
 		<p>{data.total} personajes</p>

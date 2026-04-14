@@ -6,12 +6,16 @@
 
 	export let data: PageData;
 
-	function updateQuery(value: string) {
-		const trimmed = value.trim();
+	function updateFilters(filters: { query: string; status: string }) {
+		const trimmed = filters.query.trim();
 		const params = new URLSearchParams();
 
 		if (trimmed) {
 			params.set('q', trimmed);
+		}
+
+		if (filters.status) {
+			params.set('status', filters.status);
 		}
 
 		const target = params.toString() ? `${base}/?${params.toString()}` : `${base}/`;
@@ -19,4 +23,4 @@
 	}
 </script>
 
-<CharacterBrowser data={data} onQueryChange={updateQuery} />
+<CharacterBrowser data={data} onFiltersChange={updateFilters} />
